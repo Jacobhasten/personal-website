@@ -12,7 +12,7 @@ function Nav() {
                <Link to="/"><img className="nav-close-tab" src={close} alt="close-tab" /></Link>
             </div>
         <ul className="nav-container-options">
-            <Link><li><h3 className="nav-options">Projects</h3></li></Link>
+            <Link to="/projects"><li><h3 className="nav-options">Projects</h3></li></Link>
             <Link><li><h3 className="nav-options">Bio</h3></li></Link>
             <Link><li><h3 className="nav-options">Resume</h3></li></Link>
             <Link> <li><h3 className="nav-options">Contact</h3></li></Link>
