@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Home from './Components/Home';
-import Nav from './Components/Nav';
+import MobileNav from './Components/MobileNav.jsx';
 import Projects from './Components/Projects'
 import { Switch, Route } from "react-router-dom";
 
@@ -14,7 +14,7 @@ function App() {
           <Home />
         </Route>
         <Route path="/nav">
-          <Nav />
+          <MobileNav />
         </Route>
         <Route path="/projects">
           <Projects/>
