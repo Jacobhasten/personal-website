@@ -56,6 +56,12 @@ button {
   color: $primary-light-color;
 }
 
+.description-link {
+  text-decoration: underline;
+  font-style: italic;
+
+}
+
 // App
 .app-container {
   background-image: $primary-dark-color;
@@ -197,6 +203,35 @@ button {
     }
   }
 }
+
+// Projects Modal 
+
+.projects-modal {
+  &-container {
+    padding: 16px;
+}
+&-list {
+  
+  padding: 16px;
+  color: $primary-light-color;
+}
+
+&-github-button {
+  border: solid 2px $primary-light-color;
+    padding: 8px 32px 8px 32px;
+    border-radius: 1rem;
+    margin: 16px;
+    background-image: $primary-dark-color;
+    &-container {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+}
+
+}
+
+// Turn off for mobile
 .desktop-nav-container {
   display: none;
 }
