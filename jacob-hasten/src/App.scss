@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;700&display=swap");
 
-$primary-dark-color: linear-gradient(180deg, rgba(2, 22, 66, 0.8) 0%, rgba(60, 38, 50, 0.8) 100%),
-  linear-gradient(180deg, rgba(1, 24, 74, 0.8) 0%, rgba(27, 102, 176, 0.8) 67.19%);
+$primary-dark-color: linear-gradient(180deg, rgba(2, 22, 66, 0.8) 0%, rgba(60, 38, 50, 0.8) 100%),linear-gradient(180deg, rgba(1, 24, 74, 0.8) 0%, rgba(27, 102, 176, 0.8) 67.19%);
 $primary-light-color: #baaa81;
 $primary-dark-solid: #021642;
 
@@ -133,9 +132,18 @@ button {
   }
 }
 // Nav
+.nav-modal {
+  background-color: $primary-dark-color;
+  
+}
+
+.nav-overlay {
+  background-color: $primary-dark-color;
+}
 
 .nav-container {
   height: 100vh;
+  background-color: $primary-dark-color;
   &-options {
     display: flex;
     align-items: center;
@@ -169,7 +177,7 @@ button {
       border: solid 2px $primary-light-color;
       border-radius: 1rem;
       width: 288px;
-      width: 288px;
+      height: 288px;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -254,7 +262,32 @@ button {
       }
     }
   }
+  .projects {
+    &-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      &-all-cards {
+        width: 100%;
+        height: 288px;
+        justify-content: space-evenly;
+        flex-direction: row;
+      }
+  }
+}
 }
 @media (min-width: 1200px) {
   // h1 desktop 89px, h3 desktop 32px, h4 desktop 32px, h6 desktop 32px,
+
+  h1 {
+    font-size: 89px;
+  }
+  h3, h4, h6 {
+    font-size: 32px;
+  }
+
+  button {
+    font-size: 22px;
+  }
+
 }

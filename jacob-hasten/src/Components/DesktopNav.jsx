@@ -12,6 +12,7 @@ function DesktopNav() {
                     <a href="https://github.com/Jacobhasten" target="_blank" rel="noreferrer" className="desktop-nav-link-container"><img className="desktop-nav-link-github" src={gitHubLogo} alt="github-logo" /></a>
                 </div>
                 <ul className="desktop-nav-container-right">
+                <Link to='/home'><li><button className="desktop-nav-options">Home</button></li></Link>
                     <Link to="/projects"><li><button className="desktop-nav-options">Projects</button></li></Link>
                     <Link><li><button className="desktop-nav-options">Bio</button></li></Link>
                     <Link><li><button className="desktop-nav-options">Resume</button></li></Link>

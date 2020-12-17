@@ -4,6 +4,10 @@ import RejoycePageCard from "../imgs/rejoyce-img.jpg"
 
 function Projects() {
     return (
+        <>
+        <div className="title-container">
+        <h1>Projects</h1>
+        </div>
         <div className="projects-container">
             <div className="projects-container-all-cards">
                 <div className="projects-container-card">
@@ -20,6 +24,7 @@ function Projects() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 
