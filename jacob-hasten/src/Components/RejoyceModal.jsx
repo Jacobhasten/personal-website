@@ -4,7 +4,7 @@ import close from "../imgs/close_24px_outlined.svg";
 function RejoyceModal(props) {
     return (
         <>
-            < div className="home-container-hamburger">
+            < div className="projects-modal-close-container">
                 <img onClick={() => props.updateModal(false)} className="nav-close-tab" src={close} alt="close-tab" />
             </div>
             <div className="projects-modal-container">
@@ -12,11 +12,14 @@ function RejoyceModal(props) {
                 <br />
                 <h4>"In recent events, parents are finding it hard to come up with ideas for keeping their children distracted at home during the day  while trying to work. "</h4>
                 <br />
-                <h3>
+                <h4>
 
                     Check out a more comprehensive case study <a className="description-link" href="https://beckneruie.wordpress.com/2020/10/22/rejoyce-app-project/" target="_blank" rel="noreferrer">here.</a>
                     <br />
-                </h3>
+                </h4>
+                <br />
+                <h4>The App:</h4>
+                <p>We decided to create an application that creates a random acitivty generator on a magic ball. It features a finished filtered system that allows parents to filter specific categories of activities before children hit the magic ball, a static timer, and a static design of a rewards system.</p>
                 <br />
                 <h4>My specific roles in this project were the following:</h4>
                 <ul className="projects-modal-list">

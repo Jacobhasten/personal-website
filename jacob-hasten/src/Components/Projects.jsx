@@ -5,6 +5,8 @@ import todoAppCard from "../imgs/todoapp.png";
 import Modal from "react-modal";
 import MediaQuery from 'react-responsive';
 import RejoyceModal from './RejoyceModal';
+import LandingPageModal from './LandingPageModal';
+import TodoAppModal from './TodoAppModal';
 
 function Projects() {
 
@@ -15,7 +17,7 @@ function Projects() {
     const mobileProjectsModalStyle =
     {
         overlay: {
-            position: null,
+            position: 'absolute',
             top: 0,
             left: 0,
             right: 0,
@@ -25,7 +27,7 @@ function Projects() {
         content: {
             position: 'absolute',
             width: '100%',
-            height: '100%',
+            minHeight: '100vh',
             top: 0,
             left: 0,
             right: 0,
@@ -40,7 +42,35 @@ function Projects() {
             padding: null,
         }
     }
-
+    
+    const desktopProjectsModalStyle =
+    {
+        overlay: {
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        },
+        content: {
+            position: 'absolute',
+            width: '50%',
+            minHeight: '50%',
+            top: '25%',
+            left: '25%',
+            right: '25%',
+            bottom: '25%',
+            zIndex: 200,
+            border: 'solid 2px #baaa81',
+            background: '#021642',
+            overflow: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            borderRadius: '1rem',
+            outline: 'none',
+            padding: null,
+        }
+    }
 
     return (
         <>
@@ -64,20 +94,23 @@ function Projects() {
 
                 </div>
             </div>
-            <MediaQuery maxDeviceWidth={900}>
-                <Modal style={mobileProjectsModalStyle} isOpen={modalRejoyceIsOpen}>
-                    <RejoyceModal updateModal={setModalRejoyceIsOpen}/>
+            <MediaQuery maxWidth={900}>
+                <Modal style={mobileProjectsModalStyle} isOpen={modalRejoyceIsOpen} onRequestClose={() => setModalRejoyceIsOpen(false)}>
+                    <RejoyceModal updateModal={setModalRejoyceIsOpen} />
                 </Modal>
-                <Modal isOpen={modalLandingPageIsOpen}>
-                <h1>Hi</h1>
+                <Modal isOpen={modalLandingPageIsOpen} style={mobileProjectsModalStyle} onRequestClose={() => setModalLandingPageIsOpen(false)}>
+                    <LandingPageModal updateModal={setModalLandingPageIsOpen} />
                 </Modal>
-                <Modal isOpen={modalTodoAppIsOpen}>
-                <h1>Hi</h1>
+                <Modal isOpen={modalTodoAppIsOpen} style={mobileProjectsModalStyle} onRequestClose={() => setModalTodoAppIsOpen(false)}>
+                    <TodoAppModal updateModal={setModalTodoAppIsOpen}/>
                 </Modal>
             </MediaQuery>
-            <MediaQuery minDeviceWidth={901}>
-            <Modal isOpen={modalRejoyceIsOpen}>
-                    <h1>Big Boy</h1>
+            <MediaQuery minWidth={901}>
+                <Modal style={desktopProjectsModalStyle} isOpen={modalRejoyceIsOpen} onRequestClose={() => setModalRejoyceIsOpen(false)}>
+                    <RejoyceModal updateModal={setModalRejoyceIsOpen} />
+                </Modal>
+                <Modal isOpen={modalLandingPageIsOpen} style={desktopProjectsModalStyle} onRequestClose={() => setModalLandingPageIsOpen(false)}>
+                    <LandingPageModal updateModal={setModalLandingPageIsOpen} />
                 </Modal>
 
             </MediaQuery>
