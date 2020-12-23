@@ -1,56 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import izzyBackground from "../imgs/Izzy-Background.svg";
-import menu from "../imgs/menu_24px_outlined.svg";
 import linkedinLogo from "../imgs/linkedin-logo.svg";
 import gitHubLogo from "../imgs/github-logo.svg";
-import DesktopNav from "./DesktopNav";
-import MobileNav from "./MobileNav";
 import Modal from "react-modal";
+import GlobalNav from "./GlobalNav"
+
 
 Modal.setAppElement('#root')
 
 
 function Home() {
-    const [modalIsOpen, setModalIsOpen] = useState(false)
-    const navModalStyle =
-    {
-        overlay: {
-            position: null,
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: null,
-        },
-        content: {
-            position: 'absolute',
-            width: '100%',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 200,
-            border: null,
-            background: '#021642',
-            overflow: 'auto',
-            WebkitOverflowScrolling: 'touch',
-            borderRadius: '4px',
-            outline: 'none',
-            padding: null,
-        }
-    }
+
 
     return (
         <div className="home-container">
-            <DesktopNav />
-            < div className="home-container-hamburger">
-                <button onClick={() => setModalIsOpen(true)}>
-                    <img src={menu} alt="menu" className="hamburger-menu" />
-                </button>
-                <Modal style={navModalStyle} isOpen={modalIsOpen}>
-                    <MobileNav updateModal={setModalIsOpen} />
-                </Modal>
-            </div>
+            <GlobalNav/>
             <div className="home-container-text">
                 <h1> Hello.</h1>
                 <h1>My name is Izzy.</h1>

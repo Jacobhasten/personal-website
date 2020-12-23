@@ -1,8 +1,4 @@
-import React from 'react';
-
-function ModalStyles() {
-
-    const mobileProjectsModalStyle =
+export const mobileProjectsModalStyle =
 {
     overlay: {
         position: 'absolute',
@@ -15,11 +11,11 @@ function ModalStyles() {
     content: {
         position: 'absolute',
         width: '100%',
-        minHeight: '100vh',
-        top: 0,
+        minHeight: '100%',
+        top: '80px',
         left: 0,
         right: 0,
-        bottom: 0,
+        bottom: '40px',
         zIndex: 200,
         border: null,
         background: '#021642',
@@ -31,7 +27,7 @@ function ModalStyles() {
     }
 }
 
-const desktopProjectsModalStyle =
+export const desktopProjectsModalStyle =
 {
     overlay: {
         position: 'fixed',
@@ -59,7 +55,31 @@ const desktopProjectsModalStyle =
         padding: null,
     }
 }
+
+export const navModalStyle =
+{
+    overlay: {
+        position: null,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: null,
+    },
+    content: {
+        position: 'absolute',
+        width: '100%',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 200,
+        border: null,
+        background: '#021642',
+        overflow: 'auto',
+        WebkitOverflowScrolling: 'touch',
+        borderRadius: '4px',
+        outline: 'none',
+        padding: null,
+    }
 }
-
-export default ModalStyles {desktopProjectsModalStyle , mobileProjectsModalStyle};
-

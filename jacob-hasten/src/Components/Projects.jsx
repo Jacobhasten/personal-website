@@ -7,6 +7,8 @@ import MediaQuery from 'react-responsive';
 import RejoyceModal from './RejoyceModal';
 import LandingPageModal from './LandingPageModal';
 import TodoAppModal from './TodoAppModal';
+import { desktopProjectsModalStyle, mobileProjectsModalStyle } from './ModalStyles';
+import GlobalNav from "./GlobalNav";
 
 function Projects() {
 
@@ -14,66 +16,9 @@ function Projects() {
     const [modalLandingPageIsOpen, setModalLandingPageIsOpen] = useState(false)
     const [modalTodoAppIsOpen, setModalTodoAppIsOpen] = useState(false)
 
-    const mobileProjectsModalStyle =
-    {
-        overlay: {
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: null,
-        },
-        content: {
-            position: 'absolute',
-            width: '100%',
-            minHeight: '100vh',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            zIndex: 200,
-            border: null,
-            background: '#021642',
-            overflow: 'auto',
-            WebkitOverflowScrolling: 'touch',
-            borderRadius: '4px',
-            outline: 'none',
-            padding: null,
-        }
-    }
-    
-    const desktopProjectsModalStyle =
-    {
-        overlay: {
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-        },
-        content: {
-            position: 'absolute',
-            width: '50%',
-            minHeight: '50%',
-            top: '25%',
-            left: '25%',
-            right: '25%',
-            bottom: '25%',
-            zIndex: 200,
-            border: 'solid 2px #baaa81',
-            background: '#021642',
-            overflow: 'auto',
-            WebkitOverflowScrolling: 'touch',
-            borderRadius: '1rem',
-            outline: 'none',
-            padding: null,
-        }
-    }
-
     return (
         <>
+        <GlobalNav/>
             <div className="page-title-container">
                 <h1 className="page-title">Projects</h1>
             </div>
@@ -102,7 +47,7 @@ function Projects() {
                     <LandingPageModal updateModal={setModalLandingPageIsOpen} />
                 </Modal>
                 <Modal isOpen={modalTodoAppIsOpen} style={mobileProjectsModalStyle} onRequestClose={() => setModalTodoAppIsOpen(false)}>
-                    <TodoAppModal updateModal={setModalTodoAppIsOpen}/>
+                    <TodoAppModal updateModal={setModalTodoAppIsOpen} />
                 </Modal>
             </MediaQuery>
             <MediaQuery minWidth={901}>
@@ -112,7 +57,9 @@ function Projects() {
                 <Modal isOpen={modalLandingPageIsOpen} style={desktopProjectsModalStyle} onRequestClose={() => setModalLandingPageIsOpen(false)}>
                     <LandingPageModal updateModal={setModalLandingPageIsOpen} />
                 </Modal>
-
+                <Modal isOpen={modalTodoAppIsOpen} style={desktopProjectsModalStyle} onRequestClose={() => setModalTodoAppIsOpen(false)}>
+                    <TodoAppModal updateModal={setModalTodoAppIsOpen} />
+                </Modal>
             </MediaQuery>
         </>
     )

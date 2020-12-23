@@ -13,9 +13,9 @@ function MobileNav(props) {
                <button onClick={() => props.updateModal(false)}><img className="nav-close-tab" src={close} alt="close-tab" /></button>
             </div>
         <ul className="nav-container-options">
-            <Link to='/home'><li><h3 className="nav-options">Home</h3></li></Link>
+            <Link to='/'><li><h3 className="nav-options">Home</h3></li></Link>
             <Link to="/projects"><li><h3 className="nav-options">Projects</h3></li></Link>
-            <Link><li><h3 className="nav-options">Bio</h3></li></Link>
+            <Link to="/bio"><li><h3 className="nav-options">Bio</h3></li></Link>
             <Link><li><h3 className="nav-options">Resume</h3></li></Link>
             <Link> <li><h3 className="nav-options">Contact</h3></li></Link>
 

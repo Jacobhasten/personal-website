@@ -17,6 +17,7 @@ $primary-dark-solid: #021642;
 body {
   font-family: "Raleway", sans-serif;
 }
+
 h1,
 h3,
 h4,
@@ -238,6 +239,31 @@ button {
     display: flex;
     justify-content: flex-end;
   }
+}
+
+//Bio 
+.bio-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bio-text-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  &-paragraph {
+    padding: 0px 16px 16px 16px;
+    
+  }
+}
+.bio-paragraph {
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 // Turn off for mobile
