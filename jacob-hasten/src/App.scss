@@ -63,7 +63,12 @@ button {
   font-family: "Raleway", sans-serif;
   color: $primary-light-color;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  }
 }
+
+
 
 .description-link {
   text-decoration: underline;

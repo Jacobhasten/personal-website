@@ -5,7 +5,7 @@ import MobileNav from './Components/MobileNav.jsx';
 import Projects from './Components/Projects'
 import { Switch, Route } from "react-router-dom";
 import Bio from "./Components/Bio";
-
+import Contact from "./Components/Contact"
 
 function App() {
   return (
@@ -22,6 +22,9 @@ function App() {
         </Route>
         <Route path="/bio">
           <Bio/>
+        </Route>
+        <Route path="/contact">
+          <Contact/>
         </Route>
       </div>
     </Switch>

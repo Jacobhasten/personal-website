@@ -16,7 +16,7 @@ function DesktopNav() {
                     <Link to="/projects"><li><button className="desktop-nav-options">Projects</button></li></Link>
                     <Link to="/bio"><li><button className="desktop-nav-options">Bio</button></li></Link>
                     <a href="https://docs.google.com/document/d/1deljUmHon3flsljy4q_EFPtmr4p2x7KKELpn8Mq9uus/edit?usp=sharing" target="_blank" rel="noreferrer"><li><button className="desktop-nav-options">Resume</button></li></a>
-                    <Link> <li><button className="desktop-nav-options">Contact</button></li></Link>
+                    <Link to="/contact"> <li><button className="desktop-nav-options">Contact</button></li></Link>
                 </ul>
             </div>
     )
