@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState ,useEffect } from "react";
 import GlobalNav from "./GlobalNav";
 import emailjs from "emailjs-com";
 
 function Contact() {
+
 
     function sendEmail(e) {
         e.preventDefault();
@@ -13,9 +14,10 @@ function Contact() {
           }, (error) => {
               console.log(error.text);
           });
+
+          
       }
-    
-    
+
     return(
 <div className="contact-container">
     <GlobalNav/>
@@ -23,7 +25,7 @@ function Contact() {
                 <h1 className="page-title">Contact</h1>
     </div>
     <div className="contact-form-container">
-        <form onSubmit={sendEmail}>
+        <form onSubmit={sendEmail} className="contact-form">
      
       <input type="text" name="name" placeholder="Name"/>
       <input type="text" name="subject" placeholder="subject"/>
