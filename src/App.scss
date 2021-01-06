@@ -269,6 +269,7 @@ button {
   flex-direction: center;
   flex-wrap: wrap;
   max-width: 800px;
+  padding-bottom: 80px;
   &-paragraph {
     padding: 0px 16px 16px 16px;
   }
@@ -281,7 +282,7 @@ button {
 // Contact
 
 .contact-container {
-  height:100vh;
+  height:100%;
 }
 .contact-form {
   display: flex;
@@ -293,6 +294,7 @@ button {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    padding-bottom: 80px;
     &-input {
       width: 100%;
       padding-bottom: 24px
