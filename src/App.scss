@@ -198,26 +198,28 @@ button {
       flex-direction: column;
     }
     &-card {
-      border: solid 2px $primary-light-color;
       border-radius: 1rem;
       width: 288px;
-      height: 288px;
       display: flex;
       justify-content: center;
       flex-direction: column;
       margin-bottom: 32px;
+
     }
   }
   &-card {
     &-title {
-      border-bottom: solid 2px $primary-light-color;
+      padding-top: 16px;
+      border: solid 2px $primary-light-color;
       width: 100%;
+      border-radius: 0.8rem 0.8rem 0rem 0rem;
     }
     &-img {
       width: 100%;
       height: 229px;
-
       object-fit: cover;
+      border: solid 2px $primary-light-color;
+      border-top: none;
       border-radius: 0 0 0.8rem 0.8rem;
     }
   }
@@ -475,6 +477,5 @@ button {
 }
 
 .projects-card-img {
-  border-bottom: solid 2px $primary-light-color;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 0 0 .8rem .8rem;
 }
