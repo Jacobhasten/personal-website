@@ -200,6 +200,7 @@ button {
     &-card {
       border-radius: 1rem;
       width: 288px;
+      min-height: 288px;
       display: flex;
       justify-content: center;
       flex-direction: column;

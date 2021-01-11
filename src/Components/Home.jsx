@@ -1,5 +1,5 @@
 import React from 'react';
-import izzyBackground from "../imgs/Izzy-Background.svg";
+import izzyBackground from "../imgs/Izzy-Background.png";
 import linkedinLogo from "../imgs/linkedin-logo.svg";
 import gitHubLogo from "../imgs/github-logo.svg";
 import Modal from "react-modal";
