@@ -211,6 +211,8 @@ button {
   &-card {
     &-title {
       padding-top: 16px;
+      padding-bottom: 16px;
+      min-height: fit-content;
       border: solid 2px $primary-light-color;
       width: 100%;
       border-radius: 0.8rem 0.8rem 0rem 0rem;
